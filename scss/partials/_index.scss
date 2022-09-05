@@ -1,0 +1,63 @@
+.full{
+    display: flex;
+    height: 100%;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 50%;
+    height: 100%;
+    background-image: url(../images/bg-main-desktop.png);
+    background-size: 487px 900px;
+    background-repeat: no-repeat;
+    &__front{
+        position: relative;
+        text-align: center;
+        color: white;
+        font-family: $mainFont;
+        margin-right: 15%;
+        
+        img{
+            width: 100%;
+        }
+        &__logo{
+            position: absolute;
+            top: 25px;
+            left: 25px
+        }
+        &__info{
+            position: absolute;
+            bottom: 30px;
+            left: 25px;
+            width: 90%;
+            
+            
+            &__number{
+                font-size: 28px;
+                margin-bottom: 30px;
+                letter-spacing: 3px;
+                word-spacing: 3px;
+            
+            }
+            &__data{
+                display: flex;
+                justify-content: space-between;
+                letter-spacing: 2px;                
+                P{
+                    font-size: 10px;
+                    padding: 0px 10px
+                }
+            }
+        }      
+    }
+    &__back{
+       position: relative;       
+    }
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}

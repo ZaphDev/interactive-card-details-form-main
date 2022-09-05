@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  height: 100vh;
+  min-height: 667px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 10px;
+  color: darkgray;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.full {
+  display: flex;
+  height: 100%;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 50%;
+  height: 100%;
+  background-image: url(../images/bg-main-desktop.png);
+  background-size: 487px 900px;
+  background-repeat: no-repeat;
+}
+
+.cards__front {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  margin-right: 15%;
+}
+
+.cards__front img {
+  width: 100%;
+}
+
+.cards__front__logo {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.cards__front__info {
+  position: absolute;
+  bottom: 30px;
+  left: 25px;
+  width: 90%;
+}
+
+.cards__front__info__number {
+  font-size: 28px;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+}
+
+.cards__front__info__data {
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 2px;
+}
+
+.cards__front__info__data P {
+  font-size: 10px;
+  padding: 0px 10px;
+}
+
+.cards__back {
+  position: relative;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
