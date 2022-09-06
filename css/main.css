@@ -8,7 +8,7 @@
 body {
   display: block;
   height: 100vh;
-  min-height: 667px;
+  max-width: 1440px;
 }
 
 .attribution {
@@ -45,10 +45,7 @@ body {
   color: white;
   font-family: "Space Grotesk", sans-serif;
   margin-right: 15%;
-}
-
-.cards__front img {
-  width: 100%;
+  margin-bottom: 35px;
 }
 
 .cards__front__logo {
@@ -66,7 +63,7 @@ body {
 
 .cards__front__info__number {
   font-size: 28px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   letter-spacing: 3px;
   word-spacing: 3px;
 }
@@ -78,16 +75,114 @@ body {
 }
 
 .cards__front__info__data P {
-  font-size: 10px;
+  font-size: 14px;
   padding: 0px 10px;
 }
 
 .cards__back {
   position: relative;
+  text-align: center;
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.cards__back__cvc {
+  position: absolute;
+  bottom: 48%;
+  right: 55px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 50%;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  color: #21092f;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.form__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  height: 45%;
+}
+
+.form__info label p {
+  margin-bottom: 8px;
+}
+
+.form__info input {
+  width: 100%;
+  height: 45px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 17px;
+  padding-left: 10px;
+  border: 1px solid #dedddf;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.form__info input:focus {
+  outline: none;
+  border: double 1px transparent;
+  border-radius: 5px;
+  background-image: linear-gradient(white, white), linear-gradient(0deg, #6448fe 0%, #600594 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.form__info input::placeholder {
+  color: #dedddf;
+}
+
+.form__info__dateNcvc {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.form__info__dateNcvc input {
+  width: 100%;
+}
+
+.form__info__dateNcvc__date {
+  width: 50%;
+}
+
+.form__info__dateNcvc__date input {
+  width: 45%;
+}
+
+.form__info button {
+  height: 50px;
+  border-radius: 8px;
+  border-style: none;
+  background-color: #21092f;
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.attribution {
+  font-size: 8px;
+  margin: 0;
+}
+
+#dateTitle2 {
+  display: none;
+}
+
+@media only screen and (max-width: 1335px) {
+  #dateTitle1 {
+    display: none;
+  }
+  #dateTitle2 {
+    display: block;
+  }
 }
