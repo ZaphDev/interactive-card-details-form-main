@@ -50,20 +50,20 @@ body {
 
 .cards__front__logo {
   position: absolute;
-  top: 25px;
-  left: 25px;
+  top: 10%;
+  left: 7%;
 }
 
 .cards__front__info {
   position: absolute;
-  bottom: 30px;
-  left: 25px;
+  bottom: 12%;
+  left: 5%;
   width: 90%;
 }
 
 .cards__front__info__number {
-  font-size: 28px;
-  margin-bottom: 25px;
+  font-size: 1.7em;
+  margin-bottom: 1em;
   letter-spacing: 3px;
   word-spacing: 3px;
 }
@@ -75,7 +75,7 @@ body {
 }
 
 .cards__front__info__data P {
-  font-size: 14px;
+  font-size: .9em;
   padding: 0px 10px;
 }
 
@@ -111,6 +111,13 @@ body {
   justify-content: space-around;
   width: 50%;
   height: 45%;
+}
+
+.form__info__errors {
+  margin-top: 5px;
+  color: #ff5252;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .form__info label p {
@@ -169,6 +176,45 @@ body {
   letter-spacing: 1px;
 }
 
+.form__thankyou {
+  display: none;
+  text-align: center;
+  width: 50%;
+}
+
+.form__thankyou img {
+  margin-bottom: 35px;
+}
+
+.form__thankyou h1 {
+  letter-spacing: 4px;
+  margin-bottom: 18px;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.form__thankyou p {
+  color: #8e8593;
+  margin-bottom: 45px;
+  font-size: 18px;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: normal;
+}
+
+.form__thankyou button {
+  height: 50px;
+  border-radius: 8px;
+  border-style: none;
+  background-color: #21092f;
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 .attribution {
   font-size: 8px;
   margin: 0;
@@ -184,5 +230,46 @@ body {
   }
   #dateTitle2 {
     display: block;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  body {
+    height: auto;
+  }
+  .full {
+    flex-direction: column;
+  }
+  .cards {
+    width: 100%;
+    background-image: url(../images/bg-main-mobile.png);
+    background-size: auto;
+    z-index: -9999;
+    height: auto;
+  }
+  .cards__front {
+    margin-top: 100px;
+  }
+  .cards__front img {
+    width: 18rem;
+  }
+  .cards__front__logo svg {
+    width: 70%;
+  }
+  .cards__front__info__number {
+    font-size: 17px;
+  }
+  .cards__back {
+    position: absolute;
+    z-index: -1;
+  }
+  .cards__back img {
+    width: 18rem;
+  }
+  .form {
+    width: 100%;
+  }
+  .form__info {
+    width: 90%;
   }
 }

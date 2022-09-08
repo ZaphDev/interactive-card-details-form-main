@@ -22,19 +22,19 @@
      
         &__logo{
             position: absolute;
-            top: 25px;
-            left: 25px
+            top: 10%;
+            left: 7%;
         }
         &__info{
             position: absolute;
-            bottom: 30px;
-            left: 25px;
+            bottom: 12%;
+            left: 5%;
             width: 90%;
             
             
             &__number{
-                font-size: 28px;
-                margin-bottom: 25px;
+                font-size: 1.7em;
+                margin-bottom: 1em;
                 letter-spacing: 3px;
                 word-spacing: 3px;
             
@@ -44,7 +44,7 @@
                 justify-content: space-between;
                 letter-spacing: 2px;                
                 P{
-                    font-size: 14px;
+                    font-size: .9em;
                     padding: 0px 10px
                 }
             }
@@ -72,13 +72,20 @@
     font-size: 12px;
     color: $formColor;
     letter-spacing: 2px;
-    text-transform: uppercase;    
+    text-transform: uppercase;
+
     &__info{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         width: 50%;
         height: 45%;
+        &__errors{
+            margin-top: 5px;
+            color: $errorColor;
+            text-transform: none;
+            letter-spacing: normal;
+        }
         label{
             p{
             margin-bottom: 8px;
@@ -133,6 +140,40 @@
             letter-spacing: 1px;
         }
     }
+    &__thankyou{
+        display: none;      
+        text-align: center;
+        width: 50%;
+        img{
+            margin-bottom: 35px;
+        }
+        h1{
+            letter-spacing: 4px;
+            margin-bottom: 18px;
+            font-size: 30px;
+            font-weight: normal;
+        }
+        p{
+            color: $greyColor;
+            margin-bottom: 45px;
+            font-size: 18px;
+            text-transform: none;
+            letter-spacing: normal;
+            font-weight: normal;
+        }
+        button{
+            height: 50px;
+            border-radius: 8px;
+            border-style: none;
+            background-color: $formColor;
+            color: white;
+            font-family: $mainFont;
+            font-size: 17px;
+            letter-spacing: 1px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
 }
 .attribution{
     font-size: 8px;
@@ -148,4 +189,52 @@
     #dateTitle2{
         display: block;
     }
+}
+@media only screen and (max-width: 769px){
+    body{
+        height: auto;
+    }
+    .full{
+        flex-direction: column;
+    }
+    .cards{
+        width: 100%;
+        background-image: url(../images/bg-main-mobile.png);
+        background-size: auto;
+        z-index: -9999;
+        height: auto;
+        &__front{
+            margin-top: 100px;
+            img{
+                width: 18rem;
+            }
+            &__logo{
+                svg{
+                    width: 70%;
+                }
+            }
+            &__info{
+                &__number{
+                    font-size: 17px;
+                    
+                }
+               
+            }
+
+        }
+        &__back{
+            position: absolute;
+            z-index: -1;
+            img{
+                width: 18rem;
+            }
+        }
+    }
+    .form{
+        width: 100%;
+        &__info{
+            width: 90%;
+        }
+    }
+
 }
