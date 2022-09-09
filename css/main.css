@@ -233,7 +233,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 768px) {
   body {
     height: auto;
   }
@@ -243,15 +243,22 @@ body {
   .cards {
     width: 100%;
     background-image: url(../images/bg-main-mobile.png);
-    background-size: auto;
+    background-size: 100% 75%;
     z-index: -9999;
     height: auto;
+    align-items: center;
   }
   .cards__front {
-    margin-top: 100px;
+    margin-top: 125px;
+    margin-right: 12%;
+    text-align: center;
   }
   .cards__front img {
     width: 18rem;
+  }
+  .cards__front__logo {
+    top: 5%;
+    left: 2%;
   }
   .cards__front__logo svg {
     width: 70%;
@@ -259,17 +266,29 @@ body {
   .cards__front__info__number {
     font-size: 17px;
   }
+  .cards__front__info__data {
+    font-size: 10px;
+  }
   .cards__back {
     position: absolute;
     z-index: -1;
+    top: 30px;
+    right: 25px;
   }
   .cards__back img {
     width: 18rem;
+  }
+  .cards__back__cvc {
+    font-size: 10px;
+    right: 40px;
   }
   .form {
     width: 100%;
   }
   .form__info {
+    width: 90%;
+  }
+  .form__thankyou {
     width: 90%;
   }
 }

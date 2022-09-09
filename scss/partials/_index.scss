@@ -190,7 +190,7 @@
         display: block;
     }
 }
-@media only screen and (max-width: 769px){
+@media only screen and (max-width: 768px){
     body{
         height: auto;
     }
@@ -200,22 +200,30 @@
     .cards{
         width: 100%;
         background-image: url(../images/bg-main-mobile.png);
-        background-size: auto;
+        background-size: 100% 75%;
         z-index: -9999;
         height: auto;
+        align-items: center;
         &__front{
-            margin-top: 100px;
+            margin-top: 125px;
+            margin-right: 12%;
+            text-align: center;
             img{
                 width: 18rem;
             }
             &__logo{
+                top: 5%;
+                left: 2%;
                 svg{
                     width: 70%;
                 }
             }
             &__info{
                 &__number{
-                    font-size: 17px;
+                    font-size: 17px;                    
+                }
+                &__data{
+                    font-size: 10px;
                     
                 }
                
@@ -225,14 +233,23 @@
         &__back{
             position: absolute;
             z-index: -1;
+            top: 30px;
+            right: 25px;
             img{
                 width: 18rem;
+            }
+            &__cvc{
+                font-size: 10px;
+                right: 40px;
             }
         }
     }
     .form{
         width: 100%;
         &__info{
+            width: 90%;
+        }
+        &__thankyou{
             width: 90%;
         }
     }
