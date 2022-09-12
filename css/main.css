@@ -190,6 +190,11 @@ body {
   }
 }
 
+.form__info button:hover {
+  background-color: #47275A;
+  cursor: pointer;
+}
+
 .form__thankyou {
   display: none;
   text-align: center;
@@ -227,6 +232,11 @@ body {
   letter-spacing: 1px;
   width: 100%;
   margin-bottom: 10px;
+}
+
+.form__thankyou button:hover {
+  background-color: #47275A;
+  cursor: pointer;
 }
 
 .attribution {
@@ -305,8 +315,4 @@ body {
   .form__thankyou {
     width: 90%;
   }
-}
-
-#cardNumber {
-  border-color: none;
 }

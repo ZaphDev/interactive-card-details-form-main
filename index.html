@@ -37,7 +37,7 @@
     <div class="form">
       <form class="form__info" id="cardForm">
         <label><p>Cardholder Name</p>
-          <input type="text" id="cardName" placeholder="e.g Jane Appleseed" required>
+          <input type="text" id="cardName" placeholder="e.g Jane Appleseed" required onfocusout="nameCheck()">
           <p class="form__info__errors" id="cardNameError"></p>
         </label>
         <label><p>Card Number</p>
@@ -47,27 +47,27 @@
         <div class="form__info__dateNcvc">
           <div class="form__info__dateNcvc__date">
             <label><p id="dateTitle1">Exp. Date (MM/YY)</p><p id="dateTitle2">Exp. Date</p>
-              <input type="text" id="month" pattern="[0]+[0-9]||[1]+[0-2]" maxlength="2" placeholder="MM" required>
-              <input type="text" id="year" pattern="[0-9]+[0-9]" maxlength="2" placeholder="YY" required>
-              <p class="form__info__errors" id="dateError"></p> 
+              <input type="text" id="month" pattern="[0]+[0-9]||[1]+[0-2]" maxlength="2" placeholder="MM" required onfocusout="dateCheck()">
+              <input type="text" id="year" pattern="[0-9]+[0-9]" maxlength="2" placeholder="YY" required onfocusout="dateCheck()">
+              <p class="form__info__errors" id="cardDateError"></p> 
             </label>
           </div>
           <label><p>CVC</p>
-            <input type="text" id="CVC" pattern="[0-9]+[0-9]+[0-9]" maxlength="3" placeholder="e.g 123" required>
-            <p class="form__info__errors" id="cvcError"></p> 
+            <input type="text" id="CVC" pattern="[0-9]+[0-9]+[0-9]" maxlength="3" placeholder="e.g 123" required onfocusout="cvcCheck()">
+            <p class="form__info__errors" id="cardCvcError"></p> 
           </label>
         </div>
         <button type="button" name="confirm" id="confirm" onclick="confirmData()">Confirm</button>
     </form>
-    <div class="form__thankyou">
+    <div class="form__thankyou" id="thankyou">
       <img src="./images/icon-complete.svg" alt="Completed checkmark">
       <h1>THANK YOU!</h1>
       <P>We've added your card details</P>
-      <button type="submit" name="continue" id="continue">Continue</button>
+      <button type="submit" name="continue" id="continue" onClick="window.location.reload();">Continue</button>
     </div>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">ZaphDev</a>.
+      Coded by <a href="https://github.com/ZaphDev">ZaphDev</a>.
     </div>
   </div>  
 </div>
